@@ -1,9 +1,9 @@
 let cod;
-
+exports.cod=cod;
 
 exports.codeBreaker= async(req,res)=>{
 try{
-    cod="1245"
+    console.log(cod + ""+ req.params.usercode)
     let result=""
     for (let index = 0; index < cod.length; index++) {
     const characterA = req.params.usercode.substr(index,1);
@@ -41,7 +41,7 @@ exports.generate= async(req,res)=>{
             numbers[j] = temp;
         }
         let randomCod = numbers.slice(0,4).join('');
-        cod = randomCod.toString()
+        let cod = randomCod.toString()
         res.json(cod);
     
     }
