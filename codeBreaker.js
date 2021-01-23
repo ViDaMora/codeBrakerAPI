@@ -41,7 +41,7 @@ exports.generate= async(req,res)=>{
             numbers[j] = temp;
         }
         let randomCod = numbers.slice(0,4).join('');
-        let cod = randomCod.toString()
+        cod = randomCod.toString()
         res.json(cod);
     
     }
