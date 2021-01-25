@@ -9,7 +9,7 @@ let codeBreaker = async (req, res) => {
             if (characterA == characterCod) {
                 result = result + "X"
             } else {
-                let find = cod.indexOf(characterA)
+                let find = this.cod.indexOf(characterA)
                 if (find != -1) {
                     result = result + "-"
                 }
