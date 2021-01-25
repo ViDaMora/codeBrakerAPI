@@ -4,10 +4,10 @@ app = express();
 let Router = express.Router();
 
 Router.get('/generate', codeBreaker.generate);
-Router.post('/codebraker/:usercode', codeBreaker.codeBreaker);
+Router.get('/codebreaker/:usercode', codeBreaker.codeBreaker);
 
 
 app.use(Router);
-app.listen(3000,function () {
+app.listen(process.env.PORT || 3000,function () {
     console.log("Running on port : 3000")
 })
